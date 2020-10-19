@@ -4,7 +4,7 @@ nav
   width: 20%
   ul
     background-color: #585151
-    padding: 30px 0
+    padding: 20px 0
     border-radius: 20px
     display: flex
     flex-direction: column
@@ -12,21 +12,26 @@ nav
     align-items: center
     position: sticky
     top: 20px
-    .item
+    li
       list-style-type: none
       margin: 35px 0
       width: 170px
       text-align: center
       font-size: 20px
-      background: #585151
-      border-radius: 15px
-      box-shadow:  -7px 7px 14px #232020, 7px -7px 14px #8d8282, inset 0px 0px 0px #232020, inset 0px 0px 0px #8d8282
-      padding: 15px 10px
-      transition: all .2s linear
-      &:hover
-        box-shadow: 0px 0px 0px #232020, 0px 0px 0px #8d8282, inset -7px 7px 14px #232020, inset 7px -7px 14px #8d8282
-        color: #a3a3a3
       a
-        width: 100%
+        border-radius: 15px
+        background: #585151
+        box-shadow:  -7px 7px 14px #232020, 7px -7px 14px #8d8282, inset 0px 0px 0px #232020, inset 0px 0px 0px #8d8282
+        transition: all .2s linear
+        padding: 15px 10px
+        display: block
         text-decoration: none
         color: #fff
+        &:hover
+          box-shadow: 0px 0px 0px #232020, 0px 0px 0px #8d8282, inset -7px 7px 14px #232020, inset 7px -7px 14px #8d8282
+          color: #a3a3a3
+          letter-spacing: .1em
+      a.active
+        box-shadow: 0px 0px 0px #232020, 0px 0px 0px #8d8282, inset -25px 25px 50px #232020, inset 25px -25px 50px #8d8282 !important
+        color: #a3a3a3!important
+        letter-spacing: .1em!important

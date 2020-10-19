@@ -1,0 +1,88 @@
+@import "../../Sass/_var"
+.dialogs
+  width: 80%
+  margin-left: 1%
+  margin-top: 20px
+  display: flex
+  .chats__list
+    width: 25%
+    .item
+      display: flex
+      background-color: $item_color
+      margin: 10px 0
+      padding: 10px 5px
+      border-radius: 20px
+      cursor: pointer
+      img
+        width: 50px
+        height: 50px
+        border-radius: 50%
+      .name
+        margin-left: 10px
+        word-break: break-word
+  .chat
+    margin-left: 10px
+    border-radius: 20px
+    background-color: $item_color
+    width: 80%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-height: calc(100vh - 120px)
+    .message__list
+      padding: 15px
+      overflow-y: scroll
+      height: 100%
+      &::-webkit-scrollbar
+        background-color: transparent
+        width: 5px
+        margin-right: 5px
+        border-radius: 30px
+      &::-webkit-scrollbar-thumb
+        background-color: $no_item
+        border-radius: 30px
+      .item
+        width: 50%
+        background-color: $message_color
+        border-radius: 20px
+        padding: 10px
+        color: #fff
+        font-size: 14px
+        margin-bottom: 10px
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          right: 10px
+          bottom: -9px
+          transform: rotate(90deg)
+          border: 10px solid transparent
+          border-top: 10px solid $message_color
+    .enter
+      display: flex
+      padding: 10px 2%
+      textarea
+        width: 80%
+        resize: none
+        max-height: 100px
+        outline: none
+        border-radius: 20px
+        color: #fff
+        background: #585151
+        box-shadow: inset -9px 9px 18px #433e3e, inset 9px -9px 18px #6d6464
+        padding: 10px
+        border: none
+      button
+        cursor: pointer
+        width: 20%
+        margin-left: 2%
+        border-radius: 30px
+        outline: none
+        background: #585151
+        border: none
+        color: #fff
+        transition: all .2s
+        box-shadow:  -9px 9px 18px #433e3e, 9px -9px 18px #6d6464, inset 0px 0px 0px #433e3e, inset 0px 0px 0px #6d6464
+        &:hover
+          letter-spacing: .1em
+          box-shadow: 0px 0px 0px #433e3e, 0px 0px 0px #6d6464, inset -9px 9px 18px #433e3e, inset 9px -9px 18px #6d6464

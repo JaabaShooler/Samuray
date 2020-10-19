@@ -7,6 +7,7 @@
       resize: none
       outline: none
       padding: 8px
+      padding-top: 12px
       height: 75px
       border: none
       width: 90%
@@ -14,6 +15,7 @@
       color: #a3a3a3
       border-radius: 20px
       background: #585151
+      color: #fff
       box-shadow: inset -5px 5px 25px #373232, inset 5px -5px 25px #797070
       &::-webkit-scrollbar
         width: 5px
@@ -23,8 +25,6 @@
         background-color: #fff
     button
       border-radius: 15px
-      background: linear-gradient(225deg, #5e5757, #4f4949)
-      box-shadow:  -9px 9px 18px #282525, 9px -9px 18px #887d7d, inset 0px 0px 0px #282525, inset 0px 0px 0px #887d7d
       color: #f5f5ff
       border: none
       width: 10%
@@ -35,9 +35,13 @@
       font-size: 16px
       cursor: pointer
       max-height: 50px
+      background: linear-gradient(225deg, #5e5757, #4f4949)
+      box-shadow:  -9px 9px 18px #282525, 9px -9px 18px #887d7d, inset 0px 0px 0px #282525, inset 0px 0px 0px #887d7d
       &:hover
         background: linear-gradient(225deg, #4f4949, #5e5757)
+        letter-spacing: .1em
       &:active
         box-shadow: 0px 0px 0px #282525, 0px 0px 0px #887d7d, inset -9px 9px 18px #282525, inset 9px -9px 18px #887d7d
+        letter-spacing: .15em
 .posts
   padding: 0 5%
