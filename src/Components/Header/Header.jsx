@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../logo.png";
+import logo from "../../logo.png";
+import header from './Header.module.sass';
 
 const Header = () => {
     return (
