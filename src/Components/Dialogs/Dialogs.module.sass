@@ -5,7 +5,19 @@
   margin-top: 20px
   display: flex
   .chats__list
+    padding: 10px
     width: 25%
+    height: 100%
+    max-height: calc(100vh - 120px)
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      background-color: transparent
+      width: 5px
+      margin-right: 5px
+      border-radius: 30px
+    &::-webkit-scrollbar-thumb
+      background-color: $no_item
+      border-radius: 30px
     .item
       display: flex
       background-color: $item_color
@@ -13,6 +25,12 @@
       padding: 10px 5px
       border-radius: 20px
       cursor: pointer
+      color: #ffffff
+      text-decoration: none
+      transition: all .2s
+      &.active
+        box-shadow: -5px 5px 3px #232020,  5px -5px 3px #8d8282, inset 0px 0px 0px #232020, inset 0px 0px 0px #8d8282 !important
+        color: #a3a3a3!important
       img
         width: 50px
         height: 50px

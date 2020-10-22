@@ -1,38 +1,46 @@
 import React from "react";
 import css from './Dialogs.module.sass'
-import avatar from '../../empty-man.jpg'
+import Chats from "./Chats/Chats";
+import Message from "./Message/Message";
+import {ActionCreatorAddMessage, ActionCreatorTextUpdate} from "../../Redux/State";
+
 
 const Dialogs = (props) => {
+
+    console.log(props);
+
+    let ArrMessages = props.ChatPage.messages.map( message => <Message data={message.data} id={message.id}/>)
+
+    let ArrChats = props.ChatPage.chats.map( chat => <Chats data={chat.data} id={chat.id} /> )
+
+    let newMessage = React.createRef();
+    // debugger;
+    let UpdateText = () => {
+        props.dispatch(ActionCreatorTextUpdate(newMessage.current.value, 'ChatPage'))
+    }
+
+    let AddMessage = () => {
+        props.dispatch(ActionCreatorAddMessage())
+    }
+
     return (
         <div className={css.dialogs}>
             <div className={css.chats__list}>
-                <div className={css.item}>
-                    <img src={avatar} alt="avatar"/>
-                    <h3 className={css.name}>Sasha Goncharenko</h3>
-                </div>
-                <div className={css.item}>
-                    <img src={avatar} alt="avatar"/>
-                    <h3 className={css.name}>Denis Solyankov</h3>
-                </div>
-                <div className={css.item}>
-                    <img src={avatar} alt="avatar"/>
-                    <h3 className={css.name}>Sasha Yakimenko</h3>
-                </div>
+                {ArrChats}
             </div>
             <div className={css.chat}>
                 <div className={css.message__list}>
-                    <div className={css.item}>Hi (Hello world!) </div>
-                    <div className={css.item}>How</div>
-                    <div className={css.item}>Are</div>
-                    <div className={css.item}>U</div>
-                    <div className={css.item}>U</div>
-                    <div className={css.item}>U</div>
-                    <div className={css.item}>U</div>
+                    {ArrMessages}
                 </div>
-                <form action="" className={css.enter}>
-                    <textarea></textarea>
-                    <button>Send</button>
-                </form>
+                <div className={css.enter}>
+                    <textarea
+                        ref={newMessage}
+                        placeholder="Write a message..."
+                        onChange={UpdateText}
+                        value={props.ChatPage.UpdatedText}
+                    />
+                    <button onClick={AddMessage} >Send</button>
+                </div>
             </div>
         </div>
     );
