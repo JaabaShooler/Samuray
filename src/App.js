@@ -3,27 +3,22 @@ import './App.sass';
 import Header from "./Components/Header/Header";
 import NavBar from "./Components/NavBar/NavBar";
 import Profile from "./Components/Profile/Profile";
-import Dialogs from "./Components/Dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
+import DialogsContainer from "./Components/Dialogs/DialogsContanier";
+import {Route} from "react-router-dom";
 
 
 function App(props) {
+    // debugger;
     return (
         <div className="app-wrapper">
             <Header/>
             <div className="main-content">
                 <NavBar/>
                 <Route path='/profile'
-                       render={ () => <Profile
-                           ProfilePage={props.state.ProfilePage}
-                           dispatch={props.dispatch}
-                       /> }
+                       render={ () => <Profile/> }
                 />
                 <Route path='/dialogs'
-                       render={ () => <Dialogs
-                           ChatPage={props.state.ChatPage}
-                           dispatch={props.dispatch}
-                       /> }
+                       render={ () => <DialogsContainer/> }
                 />
             </div>
         </div>

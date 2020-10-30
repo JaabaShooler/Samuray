@@ -2,25 +2,25 @@ import React from "react";
 import css from './Dialogs.module.sass'
 import Chats from "./Chats/Chats";
 import Message from "./Message/Message";
-import {ActionCreatorAddMessage, ActionCreatorTextUpdate} from "../../Redux/State";
 
 
 const Dialogs = (props) => {
 
     console.log(props);
 
-    let ArrMessages = props.ChatPage.messages.map( message => <Message data={message.data} id={message.id}/>)
+    let ArrMessages = props.messages.map( message => <Message data={message.data} id={message.id}/>)
 
-    let ArrChats = props.ChatPage.chats.map( chat => <Chats data={chat.data} id={chat.id} /> )
+    let ArrChats = props.chats.map( chat => <Chats data={chat.data} id={chat.id} /> )
 
     let newMessage = React.createRef();
     // debugger;
-    let UpdateText = () => {
-        props.dispatch(ActionCreatorTextUpdate(newMessage.current.value, 'ChatPage'))
-    }
 
     let AddMessage = () => {
-        props.dispatch(ActionCreatorAddMessage())
+        props.AddMessage()
+    }
+
+    let UpdateText = () => {
+        props.UpdateText(newMessage.current.value)
     }
 
     return (
@@ -37,7 +37,7 @@ const Dialogs = (props) => {
                         ref={newMessage}
                         placeholder="Write a message..."
                         onChange={UpdateText}
-                        value={props.ChatPage.UpdatedText}
+                        value={props.text}
                     />
                     <button onClick={AddMessage} >Send</button>
                 </div>

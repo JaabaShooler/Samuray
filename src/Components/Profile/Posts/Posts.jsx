@@ -1,25 +1,19 @@
 import React from "react";
 import css from './Posts.module.sass';
-import avatar from "../../../empty-man.jpg";
 import Post from "./Post/Post";
-import {ActionCreatorAddPost, ActionCreatorTextUpdate} from "../../../Redux/State";
 
 
 const Posts = (props) => {
-
-    console.log(props)
-
+    debugger;
     let ArrPosts = props.posts.map( post => <Post message={post.message} id={post.id}/>)
-
     let newPostEl = React.createRef();
-
     let AddPost = () => {
-        props.dispatch(ActionCreatorAddPost())
+        props.AddPost();
 
     }
 
     let UpdateText = () => {
-        props.dispatch(ActionCreatorTextUpdate(newPostEl.current.value, 'ProfilePage'))
+        props.UpdateText(newPostEl.current.value)
     }
 
     return (
@@ -30,7 +24,7 @@ const Posts = (props) => {
                     <textarea ref={newPostEl}
                               placeholder="Your news..."
                               onChange={UpdateText}
-                              value={props.UpdatedText}
+                              value={props.text}
                     />
                     <button onClick={AddPost} className='post-enter'>Send</button>
                 </div>
