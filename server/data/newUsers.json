@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nickname": "_jaaba",
+      "password": "$2b$10$4n.I.ytByDkfW4BVLA.BjOhouFsAj5jnIF7PHfS3A6OPAPcHVuQQO",
+      "name": "Sanya",
+      "surname": "Goncharenko",
+      "img": "http://localhost:5000/img/123.jpg",
+      "follow": [
+        2
+      ],
+      "sex": "male",
+      "description": {
+        "location": {
+          "country": "Ukraine",
+          "city": "Chernigiv"
+        },
+        "birst-day": "13.03.2001",
+        "website": "Google.com"
+      }
+    },
+    {
+      "id": 2,
+      "nickname": "cat",
+      "password": "$2b$10$4n.I.ytByDkfW4BVLA.BjOhouFsAj5jnIF7PHfS3A6OPAPcHVuQQO",
+      "name": "Katya",
+      "surname": "Nosenko",
+      "img": "",
+      "follow": [],
+      "sex": "female",
+      "description": {
+        "location": {
+          "country": "Ukraine",
+          "city": "Chernigiv"
+        },
+        "birst-day": "22.02.2002",
+        "website": "Google.com"
+      }
+    },
+    {
+      "id": 3,
+      "nickname": "cat",
+      "password": "$2b$10$4n.I.ytByDkfW4BVLA.BjOhouFsAj5jnIF7PHfS3A6OPAPcHVuQQO",
+      "name": "Katya",
+      "surname": "Nosenko",
+      "img": "",
+      "follow": [],
+      "sex": "female",
+      "description": {
+        "location": {
+          "country": "Ukraine",
+          "city": "Chernigiv"
+        },
+        "birst-day": "22.02.2002",
+        "website": "Google.com"
+      }
+    },
+    {
+      "id": 4,
+      "nickname": "cat",
+      "password": "$2b$10$4n.I.ytByDkfW4BVLA.BjOhouFsAj5jnIF7PHfS3A6OPAPcHVuQQO",
+      "name": "Katya",
+      "surname": "Nosenko",
+      "img": "",
+      "follow": [],
+      "sex": "female",
+      "description": {
+        "location": {
+          "country": "Ukraine",
+          "city": "Chernigiv"
+        },
+        "birst-day": "22.02.2002",
+        "website": "Google.com"
+      }
+    },
+    {
+      "id": 5,
+      "nickname": "cat",
+      "password": "$2b$10$4n.I.ytByDkfW4BVLA.BjOhouFsAj5jnIF7PHfS3A6OPAPcHVuQQO",
+      "name": "Katya",
+      "surname": "Nosenko",
+      "img": "",
+      "follow": [],
+      "sex": "female",
+      "description": {
+        "location": {
+          "country": "Ukraine",
+          "city": "Chernigiv"
+        },
+        "birst-day": "22.02.2002",
+        "website": "Google.com"
+      }
+    },
+    {
+      "id": 6,
+      "nickname": "cat",
+      "password": "$2b$10$4n.I.ytByDkfW4BVLA.BjOhouFsAj5jnIF7PHfS3A6OPAPcHVuQQO",
+      "name": "Katya",
+      "surname": "Nosenko",
+      "img": "",
+      "follow": [],
+      "sex": "female",
+      "description": {
+        "location": {
+          "country": "Ukraine",
+          "city": "Chernigiv"
+        },
+        "birst-day": "22.02.2002",
+        "website": "Google.com"
+      }
+    }
+  ]
+}

@@ -2,28 +2,26 @@ const ADD_POST = 'ADD-POST';
 const TEXT_UPDATE_POST = 'TEXT-UPDATE-POST';
 
 let InitialState = {
-    posts: [
-        { id: 1, message: 'abra-kadabra'},
-        { id: 2, message: 'abra-kadabra abra-kadabra'},
-        { id: 3, message: 'abra-kadabra abra-kadabra abra-kadabra'},
-        { id: 4, message: 'abra-kadabra abra-kadabra abra-kadabra abra-kadabra'},
-        { id: 5, message: 'abra-kadabra abra-kadabra abra-kadabra abra-kadabra abra-kadabra abra-kadabra abra-kadabra abra-kadabra abra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabraabra-kadabra'},
-    ],
+    posts: [],
     UpdatedText: '',
 }
 
 const ProfileReducer = (state = InitialState, action) => {
+    let copyState ={}
     switch (action.type){
         case ADD_POST: {
-            let copyState = {...state}
-            copyState.posts = [...state.posts];
-            copyState.posts.push({id: 6, message: state.UpdatedText,});
-            copyState.UpdatedText = '';
+            copyState = {
+                ...state,
+                posts: [{id: 6, message: state.UpdatedText}, ...state.posts],
+                UpdatedText: ''
+            }
             return copyState
         }
         case TEXT_UPDATE_POST: {
-            let copyState = {...state}
-            copyState.UpdatedText = action.data;
+            copyState = {
+                ...state,
+                UpdatedText: action.data
+            }
             return copyState
         }
         default:

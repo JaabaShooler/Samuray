@@ -37,16 +37,17 @@ let InitialState = {
 const ChatReducer = (state = InitialState, action) => {
     switch (action.type){
         case ADD_MESSAGE: {
-            let copyState = {...state};
-            copyState.messages = [...state.messages];
-            copyState.messages.push({id: 22, data: state.UpdatedText});
-            copyState.UpdatedText = '';
-            return copyState
+            return {
+                ...state,
+                messages: [...state.messages, {id: 22, data: state.UpdatedText}],
+                UpdatedText: ''
+            }
         }
         case TEXT_UPDATE_MESSAGE: {
-            let copyState = {...state};
-            copyState.UpdatedText = action.data
-            return copyState
+            return {
+                ...state,
+                UpdatedText: action.data
+            }
         }
         default:
             return state

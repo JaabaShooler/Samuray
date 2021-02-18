@@ -1,4 +1,5 @@
 @import "./Sass/var"
+@import "./Sass/fonts"
 
 html
   scroll-behavior: smooth
@@ -13,11 +14,26 @@ html
 
 body
   margin: 0
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Campton',sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   color: white
 
+
+@-webkit-keyframes autofill
+  to
+    color: #666
+    background: transparent
+
+input:-webkit-autofill
+  -webkit-animation-name: autofill
+  -webkit-animation-fill-mode: both
+  -webkit-text-fill-color: $gray !important
+
+
+*
+  outline: none
+  font-family: 'Campton'
 
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace

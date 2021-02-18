@@ -4,7 +4,6 @@ import Post from "./Post/Post";
 
 
 const Posts = (props) => {
-    debugger;
     let ArrPosts = props.posts.map( post => <Post message={post.message} id={post.id}/>)
     let newPostEl = React.createRef();
     let AddPost = () => {

@@ -1,23 +1,25 @@
 import React from "react";
-import avatar from "../../../empty-man.jpg";
-import css from './ProfileInfo.module.sass'
+import css from "./ProfileInfo.module.sass";
+import img_man from "../../../empty-man.jpg";
+import img_woman from "../../../empty-woman.jpg";
 
-
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div className={css.mainInfo}>
-            <img src={avatar} alt="ProfileInfo-img"/>
+            <div className={css.img}>
+                <img src={props.img ? props.img : props.sex == 'male' ? img_man : img_woman} alt="ProfileInfo-img"/>
+                <span>nickname: <b>{props.nickname}</b></span>
+            </div>
+
             <div className={css.info}>
-                <h3>Sanya Goncharenko <span>nickname: <b>_jaaba</b></span></h3>
+                <h3>{props.name} {props.surname}</h3>
                 <div className={css.other}>
-                    <p>Birst Day: <span>13 March</span></p>
-                    <p>City: <span>Charnigiv</span></p>
-                    <p>Education: <span>CNTU</span></p>
-                    <p>WebSite: <a href="https://google.com">Google.com</a></p>
+                    <p>City: <span>{props.city}</span></p>
+                    <p>WebSite: <a href={props.website}>{props.website}</a></p>
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default ProfileInfo;
+export default ProfileInfo

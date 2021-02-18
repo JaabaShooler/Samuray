@@ -1,0 +1,78 @@
+@import '../../Sass/_var'
+
+.main
+  margin-left: 20px
+  margin-top: 20px
+  background-color: #2B2B2B
+  width: 80%
+  border-radius: 50px
+  align-items: center
+  display: flex
+  flex-direction: column
+  padding: 20px 0
+  .wrapper
+    width: 95%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    .item
+      background-color: $item_color
+      border-radius: 50px
+      display: flex
+      margin: 20px 0
+      .submitBox
+        display: flex
+        flex-direction: column
+        max-width: 200px
+        margin: 10px
+        img
+          max-width: 100%
+          border-radius: 50%
+        .follow, .unfollow
+          width: 75%
+          height: 2em
+          margin: 10px auto
+          cursor: pointer
+          background-color: #2B2B2B
+          border: 0
+          border-radius: 20px
+          box-shadow:  inset 0px 0px 0px #1a1a1a, inset 0px 0px 0px #3c3c3c, -9px 9px 18px #1a1a1a, 9px -9px 18px #3c3c3c
+          transition: all .1s
+          font-weight: 700
+        .unfollow
+          color: $red
+          box-shadow: inset -9px 9px 18px #1a1a1a, inset 9px -9px 18px #3c3c3c, 0px 0px 0px #1a1a1a, 0px 0px 0px #3c3c3c
+          letter-spacing: 1px
+          transition: all .4s
+          &:active
+            letter-spacing: normal
+            box-shadow:  inset 0px 0px 0px #1a1a1a, inset 0px 0px 0px #3c3c3c, -9px 9px 18px #1a1a1a, 9px -9px 18px #3c3c3c
+        .follow
+          letter-spacing: normal
+          color: $green
+          box-shadow:  inset 0px 0px 0px #1a1a1a, inset 0px 0px 0px #3c3c3c, -9px 9px 18px #1a1a1a, 9px -9px 18px #3c3c3c
+          &:active
+            letter-spacing: 1px
+            box-shadow: inset -9px 9px 18px #1a1a1a, inset 9px -9px 18px #3c3c3c, 0px 0px 0px #1a1a1a, 0px 0px 0px #3c3c3c
+        .follow[disabled], .unfollow[disabled]
+          background-color: #8d8282
+          color: #ffffff
+          cursor: auto
+.loadMore
+  width: 25%
+  height: 2em
+  margin: 10px auto
+  cursor: pointer
+  background-color: #2B2B2B
+  border: 0
+  border-radius: 20px
+  color: #ccc
+  box-shadow:  inset 0px 0px 0px #1a1a1a, inset 0px 0px 0px #3c3c3c, -9px 9px 18px #1a1a1a, 9px -9px 18px #3c3c3c
+  transition: all .1s
+  font-weight: 700
+  letter-spacing: normal
+  box-shadow:  inset 0px 0px 0px #1a1a1a, inset 0px 0px 0px #3c3c3c, -9px 9px 18px #1a1a1a, 9px -9px 18px #3c3c3c
+  &:active
+    letter-spacing: 1px
+    color: $gray
+    box-shadow: inset -9px 9px 18px #1a1a1a, inset 9px -9px 18px #3c3c3c, 0px 0px 0px #1a1a1a, 0px 0px 0px #3c3c3c
